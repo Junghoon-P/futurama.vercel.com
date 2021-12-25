@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Link from "next/link";
 import { CharacterData } from "../types";
 
 interface CharacterCardProps {
@@ -6,14 +7,18 @@ interface CharacterCardProps {
 }
 
 export const CharacterCard = ({ characterData }: CharacterCardProps) => {
-  const { images, name } = characterData;
+  const { id, images, name } = characterData;
 
   return (
     <Card>
-      <Profile src={images.main} alt="" />
-      <h1>
-        {name.first} {name.middle} {name.last}
-      </h1>
+      <Link href={`/characters/${id}`}>
+        <a>
+          <Profile src={images.main} alt="" />
+          <h1>
+            {name.first} {name.middle} {name.last}
+          </h1>
+        </a>
+      </Link>
     </Card>
   );
 };

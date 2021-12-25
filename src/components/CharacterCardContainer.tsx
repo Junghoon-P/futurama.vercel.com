@@ -4,7 +4,8 @@ import { CharacterCard } from "./CharacterCard";
 import { useCharacterData } from "../hooks/useCharacterData";
 
 export const CharacterCardContainer = () => {
-  const { data, error } = useCharacterData();
+  const { data, error } = useCharacterData("");
+  console.log(`data`, data);
 
   if (error) return <div>An error has occured.</div>;
   if (!data) return <div>Loading...</div>;

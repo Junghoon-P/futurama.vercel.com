@@ -9,8 +9,9 @@ export default function Home() {
     "https://api.sampleapis.com/futurama/info",
     fetcher
   );
-  if (error) return "An error has occured.";
-  if (!data) return "Loading...";
+  if (error) return <div>An error has occured.</div>;
+  if (!data) return <div>Loading...</div>;
+  console.log(`data`, data);
 
   return (
     <div>
@@ -23,7 +24,7 @@ export default function Home() {
         <h1>Futurama</h1>
         <p>
           Creator :
-          {data[0].creators.map((creator) => {
+          {data[0].creators.map((creator: any) => {
             return <p key={`creator-${creator.name}`}>{creator.name}</p>;
           })}
         </p>

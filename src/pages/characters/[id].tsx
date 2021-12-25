@@ -11,12 +11,15 @@ const CharacterDetail: NextPage = () => {
   if (error) return <div>An error has occured.</div>;
   if (!data) return <div>Loading...</div>;
 
-  const { images, name } = data;
+  const { images, name, sayings } = data;
 
   return (
     <div>
       <img src={images.main} alt="" />
       <h1>{name.first}</h1>
+      {sayings.map((saying: string, index: number) => (
+        <p key={`saying-${index}`}>{saying}</p>
+      ))}
     </div>
   );
 };

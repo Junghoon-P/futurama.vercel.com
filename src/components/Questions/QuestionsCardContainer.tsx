@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { QuestionsData } from "../types";
+import { QuestionsData } from "../../types";
 import { QuestionCard } from "./QuestionCard";
-import { useQuestionsData } from "../hooks/useQuestionsData";
+import { useQuestionsData } from "../../hooks/useQuestionsData";
 
 export const QuestionCardContainer = () => {
   const { data, error } = useQuestionsData("");

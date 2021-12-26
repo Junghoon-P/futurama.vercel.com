@@ -1,17 +1,6 @@
 import Head from "next/head";
-import useSWR from "swr";
-import axios from "axios";
-
-const fetcher = (url: string) => axios(url).then((res) => res.data);
 
 export default function Home() {
-  const { data, error } = useSWR(
-    "https://api.sampleapis.com/futurama/info",
-    fetcher
-  );
-  if (error) return <div>An error has occured.</div>;
-  if (!data) return <div>Loading...</div>;
-
   return (
     <div>
       <Head>
@@ -20,14 +9,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>CAUTION</h1>
-        <p>Do not watch this at home</p>
-        <p>
-          Creator :
-          {data[0].creators.map((creator: any) => {
-            return <p key={`creator-${creator.name}`}>{creator.name}</p>;
-          })}
-        </p>
+        <h1>Shut up and take my time!</h1>
+        <p>Do not watch too much at home</p>
       </main>
     </div>
   );

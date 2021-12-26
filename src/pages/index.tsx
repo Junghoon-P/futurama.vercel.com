@@ -11,7 +11,6 @@ export default function Home() {
   );
   if (error) return <div>An error has occured.</div>;
   if (!data) return <div>Loading...</div>;
-  console.log(`data`, data);
 
   return (
     <div>

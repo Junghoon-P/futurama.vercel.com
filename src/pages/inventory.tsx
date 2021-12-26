@@ -1,6 +1,7 @@
+import type { NextPage } from "next";
 import { InventoryCardContainer } from "../components/InventoryCardContainer";
 
-const Inventory = () => {
+const Inventory: NextPage = () => {
   return (
     <div>
       <h1>Inventory</h1>

@@ -1,6 +1,7 @@
+import type { NextPage } from "next";
 import { CharacterCardContainer } from "../../components/CharacterCardContainer";
 
-const Characters = () => {
+const Characters: NextPage = () => {
   return (
     <div>
       <h1>Futurama Character List</h1>

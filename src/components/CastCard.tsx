@@ -8,7 +8,7 @@ interface CastCardProps {
 
 export const CastCard = ({ castData }: CastCardProps) => {
   const { name, bio, born } = castData;
-  console.log(`bio`, bio.url);
+
   return (
     <Card>
       <h1>{name}</h1>

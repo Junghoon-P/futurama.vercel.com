@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { EpisodesData } from "../types";
+import { EpisodesData } from "../../types";
 import { EpisodeCard } from "./EpisodeCard";
-import { useEpisodeData } from "../hooks/useEpisodeData";
+import { useEpisodeData } from "../../hooks/useEpisodeData";
 
 export const EpisodeCardContainer = () => {
   const { data, error } = useEpisodeData("");

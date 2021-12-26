@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { InventoryData } from "../types";
+import { InventoryData } from "../../types";
 import { InventoryCard } from "./InventoryCard";
-import { useInventoryData } from "../hooks/useInventoryData";
+import { useInventoryData } from "../../hooks/useInventoryData";
 
 export const InventoryCardContainer = () => {
   const { data, error } = useInventoryData("");

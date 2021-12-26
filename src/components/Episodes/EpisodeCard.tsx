@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { EpisodesData } from "../types";
+import { EpisodesData } from "../../types";
 
 interface EpisodeCardProps {
   episodeData: EpisodesData;

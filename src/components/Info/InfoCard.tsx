@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { InfoData } from "../types";
+import { InfoData } from "../../types";
 
 interface InfoDataProps {
   infoData: InfoData;

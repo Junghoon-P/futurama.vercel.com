@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { InfoDataContainer } from "../components/InfoCardContainer";
+import { InfoDataContainer } from "../components/Info/InfoCardContainer";
 
 const Info: NextPage = () => {
   return (

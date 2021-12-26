@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { EpisodeCardContainer } from "../components/EpisodeCardContainer";
+import { EpisodeCardContainer } from "../components/Episodes/EpisodeCardContainer";
 
 const Episodes: NextPage = () => {
   return (

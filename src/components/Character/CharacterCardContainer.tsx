@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { CharacterData } from "../types";
+import { CharacterData } from "../../types";
 import { CharacterCard } from "./CharacterCard";
-import { useCharacterData } from "../hooks/useCharacterData";
+import { useCharacterData } from "../../hooks/useCharacterData";
 
 export const CharacterCardContainer = () => {
   const { data, error } = useCharacterData("");

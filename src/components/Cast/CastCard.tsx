@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { CastData } from "../types";
+import { CastData } from "../../types";
 
 interface CastCardProps {
   castData: CastData;

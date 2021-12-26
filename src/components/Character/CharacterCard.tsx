@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { CharacterData } from "../types";
+import { CharacterData } from "../../types";
 
 interface CharacterCardProps {
   characterData: CharacterData;

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { CastCardContainer } from "../components/CastCardContainer";
+import { CastCardContainer } from "../components/Cast/CastCardContainer";
 
 const Cast: NextPage = () => {
   return (

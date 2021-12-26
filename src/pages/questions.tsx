@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { QuestionCardContainer } from "../components/QuestionsCardContainer";
+import { QuestionCardContainer } from "../components/Questions/QuestionsCardContainer";
 
 const Questions: NextPage = () => {
   return (

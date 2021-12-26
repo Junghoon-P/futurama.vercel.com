@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { QuestionsData } from "../types";
+import { QuestionsData } from "../../types";
 
 interface QuestionsCardProps {
   questionData: QuestionsData;

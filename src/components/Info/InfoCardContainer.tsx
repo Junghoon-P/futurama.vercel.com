@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { InfoData } from "../types";
+import { InfoData } from "../../types";
 import { InfoCard } from "./InfoCard";
-import { useInfoData } from "../hooks/useInfoData";
+import { useInfoData } from "../../hooks/useInfoData";
 
 export const InfoDataContainer = () => {
   const { data, error } = useInfoData("");

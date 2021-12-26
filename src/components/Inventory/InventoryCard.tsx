@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { InventoryData } from "../types";
+import { InventoryData } from "../../types";
 
 interface InventoryDataProps {
   inventoryData: InventoryData;

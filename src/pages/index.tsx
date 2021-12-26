@@ -21,7 +21,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Futurama</h1>
+        <h1>CAUTION</h1>
+        <p>Do not watch this at home</p>
         <p>
           Creator :
           {data[0].creators.map((creator: any) => {

@@ -1,5 +1,10 @@
 export interface InfoData {
-  creators: [string];
+  creators: [
+    {
+      name: string;
+      url: string;
+    }
+  ];
   id: number;
   synopsis: string;
   yearsAired: string;

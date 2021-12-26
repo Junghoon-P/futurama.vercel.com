@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { CastData } from "../types";
+import { CastData } from "../../types";
 import { CastCard } from "./CastCard";
-import { useCastData } from "../hooks/useCastData";
+import { useCastData } from "../../hooks/useCastData";
 
 export const CastCardContainer = () => {
   const { data, error } = useCastData("");

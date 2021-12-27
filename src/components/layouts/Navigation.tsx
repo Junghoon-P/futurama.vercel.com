@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
 import { ROUTES } from "../../constants";
+import { MEDIA_QUERY_END_POINT, PALLETS } from "../../constants";
 
 interface ROUTE {
   ID: number;
@@ -13,25 +14,35 @@ export const Navigation = () => {
     <NavHeader>
       <Link href={"/"} passHref>
         <Header>
-          <a>Futurama</a>
+          <a>
+            <Title src="/image/title.png" alt="" />
+          </a>
         </Header>
       </Link>
-      <MainCategoryWrap>
-        <MainCategory>
-          {ROUTES.map((routeObject: ROUTE) => {
-            return (
-              <li key={routeObject.LABEL}>
-                <Link href={routeObject.PATH} passHref>
-                  <a>{routeObject.LABEL}</a>
-                </Link>
-              </li>
-            );
-          })}
-        </MainCategory>
-      </MainCategoryWrap>
+      <MainCategory>
+        {ROUTES.map((routeObject: ROUTE) => {
+          return (
+            <NavButton key={routeObject.LABEL}>
+              <Link href={routeObject.PATH} passHref>
+                <a>{routeObject.LABEL}</a>
+              </Link>
+            </NavButton>
+          );
+        })}
+      </MainCategory>
     </NavHeader>
   );
 };
+
+const Title = styled.img`
+  width: 200px;
+  transition: 0.5s;
+
+  :hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+  }
+`;
 
 const NavHeader = styled.header`
   display: flex;
@@ -46,25 +57,33 @@ const Header = styled.h1`
   cursor: pointer;
 `;
 
-const MainCategoryWrap = styled.div`
-  display: flex;
-`;
-
 const MainCategory = styled.ul`
-  position: relative;
   display: flex;
-  justify-content: space-around;
-  width: 200px;
+  justify-content: center;
   font-size: 20px;
   font-weight: 600;
 
-  &:hover #kid {
-    display: block;
-    width: 100%;
-    color: red;
+  & > li {
+    padding: 3px 10px;
+    border-radius: 10px;
+    background-color: ${PALLETS.POINT};
   }
 
   & > li + li {
-    margin-left: 10px;
+    margin-left: 30px;
+  }
+
+  @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
+    & > li + li {
+      font-size: 17px;
+      margin-left: 10px;
+    }
+  }
+`;
+
+const NavButton = styled.li`
+  :hover {
+    color: #fff;
+    background-color: #ff6a49;
   }
 `;

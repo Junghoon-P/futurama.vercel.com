@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigation } from "./Navigation";
 import styled from "@emotion/styled";
+import { PALLETS } from "../../constants";
 
 export const Layout: React.FC = ({ children }) => {
   return (
@@ -14,7 +15,7 @@ export const Layout: React.FC = ({ children }) => {
 };
 
 const Wrap = styled.main`
-  background-color: #183140;
+  background-color: ${PALLETS.MAIN};
   min-width: 100vw;
   min-height: 100vh;
 `;

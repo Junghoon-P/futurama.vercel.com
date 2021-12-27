@@ -11,7 +11,7 @@ interface ROUTE {
 export const Navigation = () => {
   return (
     <NavHeader>
-      <Link href={"/"}>
+      <Link href={"/"} passHref>
         <Header>
           <a>Futurama</a>
         </Header>
@@ -21,7 +21,7 @@ export const Navigation = () => {
           {ROUTES.map((routeObject: ROUTE) => {
             return (
               <li key={routeObject.LABEL}>
-                <Link href={routeObject.PATH}>
+                <Link href={routeObject.PATH} passHref>
                   <a>{routeObject.LABEL}</a>
                 </Link>
               </li>
@@ -62,5 +62,9 @@ const MainCategory = styled.ul`
     display: block;
     width: 100%;
     color: red;
+  }
+
+  & > li + li {
+    margin-left: 10px;
   }
 `;

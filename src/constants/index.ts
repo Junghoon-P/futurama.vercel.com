@@ -39,3 +39,11 @@ export const ROUTES = [
     LABEL: "Inventory",
   },
 ];
+
+export const PALLETS = {
+  MAIN: "#183140",
+  MAINSUB: "#D9BD89",
+  MID: "#8C6F4A",
+  POINT: "#D9593D",
+  POINTSUB: "#731A12",
+};

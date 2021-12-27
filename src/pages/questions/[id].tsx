@@ -12,7 +12,6 @@ const QuestionDetail: NextPage = () => {
   if (!data) return <div>Loading...</div>;
 
   const nextQuiz = () => {
-    console.log("click + state", { questionId });
     setQuestionId(questionId + 1);
   };
 

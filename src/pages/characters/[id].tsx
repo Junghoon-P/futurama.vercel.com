@@ -15,7 +15,7 @@ const CharacterDetail: NextPage = () => {
 
   return (
     <div>
-      <img src={images.main} alt="" />
+      <img src={images.main} alt="character profile image" />
       <h1>{name.first}</h1>
       {sayings.map((saying: string, index: number) => (
         <p key={`saying-${index}`}>{saying}</p>

@@ -12,9 +12,14 @@ export default function Home() {
       <Main>
         <h1>Shut up and take my time!</h1>
         <p>Do not watch too much at home</p>
+        <Gif src="/image/money.gif" alt="shut-up-gif" />
       </Main>
     </div>
   );
 }
 
 const Main = styled.main``;
+
+const Gif = styled.img`
+  width: 1000px;
+`;

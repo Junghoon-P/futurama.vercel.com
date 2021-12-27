@@ -1,11 +1,13 @@
 import type { NextPage } from "next";
-import { QuestionCardContainer } from "../components/Questions/QuestionsCardContainer";
+import Link from "next/link";
 
 const Questions: NextPage = () => {
   return (
     <div>
       <h1>Futurama Quiz</h1>
-      <QuestionCardContainer />
+      <Link href={"/questions/1"} passHref>
+        <a>Start</a>
+      </Link>
     </div>
   );
 };

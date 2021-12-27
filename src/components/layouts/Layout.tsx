@@ -15,8 +15,8 @@ export const Layout: React.FC = ({ children }) => {
 
 const Wrap = styled.main`
   background-color: #183140;
-  height: 100vh;
   width: 100vw;
+  min-height: 100vh;
 `;
 
 const Container = styled.main`

@@ -11,31 +11,31 @@ export const ROUTES = [
   {
     ID: 0,
     PATH: "/info",
-    LABEL: "메인 페이지",
+    LABEL: "Info",
   },
   {
     ID: 1,
     PATH: "/characters",
-    LABEL: "캐릭터 소개",
+    LABEL: "Characters",
   },
   {
     ID: 2,
     PATH: "/cast",
-    LABEL: "캐스트 소개",
+    LABEL: "Cast",
   },
   {
     ID: 3,
     PATH: "/episodes",
-    LABEL: "에피소드 소개",
+    LABEL: "Episodes",
   },
   {
     ID: 4,
     PATH: "/questions",
-    LABEL: "스토리 퀴즈",
+    LABEL: "Questions",
   },
   {
     ID: 5,
     PATH: "/inventory",
-    LABEL: "기념품",
+    LABEL: "Inventory",
   },
 ];

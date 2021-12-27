@@ -11,7 +11,11 @@ interface ROUTE {
 export const Navigation = () => {
   return (
     <NavHeader>
-      <Header>Futurama</Header>
+      <Link href={"/"}>
+        <Header>
+          <a>Futurama</a>
+        </Header>
+      </Link>
       <MainCategoryWrap>
         <MainCategory>
           {ROUTES.map((routeObject: ROUTE) => {

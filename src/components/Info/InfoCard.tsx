@@ -1,30 +1,19 @@
 import styled from "@emotion/styled";
-import { InfoData } from "../../types";
-
-interface InfoDataProps {
-  infoData: InfoData;
-}
 
 interface Creator {
-  name: string;
-  url: string;
+  infoDataProps: {
+    name: string;
+    url: string;
+  };
 }
 
-export const InfoCard = ({ infoData }: InfoDataProps) => {
-  const { creators } = infoData;
+export const InfoCard = ({ infoDataProps }: Creator) => {
+  const { name, url } = infoDataProps;
 
   return (
     <Card>
-      {creators.map((creator: Creator, idx: number) => {
-        return (
-          <>
-            <Profile href={creator.url} key={`futurama-character-${idx}`}>
-              More about Creators
-            </Profile>
-            <h1>{creator.name}</h1>
-          </>
-        );
-      })}
+      <Profile href={url}>More about Creators</Profile>
+      <h1>{name}</h1>
     </Card>
   );
 };

@@ -25,6 +25,7 @@ export const CharacterCard = ({ characterData }: CharacterCardProps) => {
 
 const Card = styled.div`
   max-width: 360px;
+  background-color: ;
 `;
 
 const Profile = styled.img`

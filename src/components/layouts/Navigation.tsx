@@ -35,12 +35,17 @@ export const Navigation = () => {
 };
 
 const Title = styled.img`
-  width: 200px;
+  width: 30vw;
   transition: 0.5s;
 
   :hover {
     transform: scale(1.2);
     transition: 0.5s;
+  }
+
+  @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
+    width: 60vw;
+    margin-top: 20px;
   }
 `;
 
@@ -49,7 +54,7 @@ const NavHeader = styled.header`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
 `;
 
 const Header = styled.h1`
@@ -60,6 +65,8 @@ const Header = styled.h1`
 const MainCategory = styled.ul`
   display: flex;
   justify-content: center;
+  width: 100vw;
+  margin-top: 20px;
   font-size: 20px;
   font-weight: 600;
 
@@ -74,8 +81,14 @@ const MainCategory = styled.ul`
   }
 
   @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
+    & > li {
+      padding: 1px 6px 3px;
+      border-radius: 10px;
+      font-size: 8px;
+      background-color: ${PALLETS.POINT};
+    }
+
     & > li + li {
-      font-size: 17px;
       margin-left: 10px;
     }
   }

@@ -48,4 +48,10 @@ export const PALLETS = {
   HOTPINK: "#F23847",
   TRANSPARENT: "rgba(255, 255, 255, 0.67)",
   SHADOW: "2px 2px 1px #decdca",
+  PURPLE: "#952FBB",
+  CREAM: "#FFFDE8",
+  GREEN: "#74AF22",
+  RED: "#BD1E5E",
+  EGG: "#F4C82F",
+  BROWN: "#423F36",
 };

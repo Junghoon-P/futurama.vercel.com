@@ -27,9 +27,9 @@ export const CharacterCard = ({ characterData }: CharacterCardProps) => {
 const Card = styled.div`
   max-width: 360px;
   padding: 10px;
-  border: 1px solid ${PALLETS.POINT};
+  border: 1px solid ${PALLETS.ORANGE};
   border-radius: 10px;
-  background-color: ${PALLETS.MAINSUB};
+  background-color: ${PALLETS.TRANSPARENT};
 
   @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
     width: 120px;

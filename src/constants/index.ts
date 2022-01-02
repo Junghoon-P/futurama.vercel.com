@@ -41,9 +41,11 @@ export const ROUTES = [
 ];
 
 export const PALLETS = {
-  MAIN: "#183140",
-  MAINSUB: "#D9BD89",
-  MID: "#8C6F4A",
-  POINT: "#D9593D",
-  POINTSUB: "#731A12",
+  NAVY: "#0E2773",
+  BLUE: "#14328C",
+  YELLOW: "#F2CE1B",
+  ORANGE: "#F28705",
+  HOTPINK: "#F23847",
+  TRANSPARENT: "rgba(255, 255, 255, 0.67)",
+  SHADOW: "2px 2px 1px #decdca",
 };

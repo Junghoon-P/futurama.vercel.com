@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { MEDIA_QUERY_END_POINT, PALLETS } from "../constants";
+import { MEDIA_QUERY_END_POINT } from "../constants";
 
 export const MainPage = () => {
   return (

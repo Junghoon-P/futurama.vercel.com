@@ -37,6 +37,7 @@ export const Navigation = () => {
 const Title = styled.img`
   width: 30vw;
   transition: 0.5s;
+  margin-top: 20px;
 
   :hover {
     transform: scale(1.2);
@@ -45,7 +46,6 @@ const Title = styled.img`
 
   @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
     width: 60vw;
-    margin-top: 20px;
   }
 `;
 
@@ -73,7 +73,7 @@ const MainCategory = styled.ul`
   & > li {
     padding: 3px 10px;
     border-radius: 10px;
-    background-color: ${PALLETS.POINT};
+    background-color: ${PALLETS.BLUE};
   }
 
   & > li + li {
@@ -85,7 +85,7 @@ const MainCategory = styled.ul`
       padding: 1px 6px 3px;
       border-radius: 10px;
       font-size: 8px;
-      background-color: ${PALLETS.POINT};
+      background-color: ${PALLETS.ORANGE};
     }
 
     & > li + li {
@@ -95,8 +95,10 @@ const MainCategory = styled.ul`
 `;
 
 const NavButton = styled.li`
-  :hover {
-    color: #fff;
+  color: #fff;
+  box-shadow: ${PALLETS.SHADOW};
+
+  &:hover {
     background-color: #ff6a49;
   }
 `;

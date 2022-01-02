@@ -2,12 +2,13 @@ import styled from "@emotion/styled";
 import { InfoCard } from "./InfoCard";
 import { useInfoData } from "../../hooks/useInfoData";
 import { MEDIA_QUERY_END_POINT } from "../../constants";
+import { Error, Loading } from "../PageHandling";
 
 export const InfoDataContainer = () => {
   const { data, error } = useInfoData();
 
-  if (error) return <div>An error has occured.</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error) return <Error />;
+  if (!data) return <Loading />;
 
   const { synopsis, creators } = data[0];
 

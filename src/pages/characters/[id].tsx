@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useCharacterData } from "../../hooks/useCharacterData";
+import { Error, Loading } from "../../components/PageHandling";
 
 const CharacterDetail: NextPage = () => {
   const router = useRouter();
@@ -8,8 +9,8 @@ const CharacterDetail: NextPage = () => {
 
   const { data, error } = useCharacterData(id);
 
-  if (error) return <div>An error has occured.</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error) return <Error />;
+  if (!data) return <Loading />;
 
   const { images, name, sayings } = data;
 

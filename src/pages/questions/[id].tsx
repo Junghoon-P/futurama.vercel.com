@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { useState } from "react";
 import { useQuestionsData } from "../../hooks/useQuestionsData";
 import styled from "@emotion/styled";
+import { Error, Loading } from "../../components/PageHandling";
 
 const QuestionDetail: NextPage = () => {
   const [questionId, setQuestionId] = useState<number>(1);
@@ -9,8 +10,8 @@ const QuestionDetail: NextPage = () => {
 
   const { data, error } = useQuestionsData(questionId);
 
-  if (error) return <div>An error has occured.</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error) return <Error />;
+  if (!data) return <Loading />;
 
   const selected = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelect(e.target.value);

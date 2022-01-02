@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigation } from "./Navigation";
 import styled from "@emotion/styled";
-import { PALLETS } from "../../constants";
+import { join } from "path/posix";
 
 export const Layout: React.FC = ({ children }) => {
   return (

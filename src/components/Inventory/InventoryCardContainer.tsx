@@ -2,12 +2,13 @@ import styled from "@emotion/styled";
 import { InventoryData } from "../../types";
 import { InventoryCard } from "./InventoryCard";
 import { useInventoryData } from "../../hooks/useInventoryData";
+import { Error, Loading } from "../PageHandling";
 
 export const InventoryCardContainer = () => {
   const { data, error } = useInventoryData("");
 
-  if (error) return <div>An error has occured.</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error) return <Error />;
+  if (!data) return <Loading />;
 
   return (
     <Container>

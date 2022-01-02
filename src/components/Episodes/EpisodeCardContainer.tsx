@@ -2,12 +2,13 @@ import styled from "@emotion/styled";
 import { EpisodesData } from "../../types";
 import { EpisodeCard } from "./EpisodeCard";
 import { useEpisodeData } from "../../hooks/useEpisodeData";
+import { Error, Loading } from "../PageHandling";
 
 export const EpisodeCardContainer = () => {
   const { data, error } = useEpisodeData("");
 
-  if (error) return <div>An error has occured.</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error) return <Error />;
+  if (!data) return <Loading />;
 
   return (
     <Container>

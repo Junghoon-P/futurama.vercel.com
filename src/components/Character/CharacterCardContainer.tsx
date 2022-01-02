@@ -2,12 +2,13 @@ import styled from "@emotion/styled";
 import { CharacterData } from "../../types";
 import { CharacterCard } from "./CharacterCard";
 import { useCharacterData } from "../../hooks/useCharacterData";
+import { Error, Loading } from "../PageHandling";
 
 export const CharacterCardContainer = () => {
   const { data, error } = useCharacterData("");
 
-  if (error) return <div>An error has occured.</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error) return <Error />;
+  if (!data) return <Loading />;
 
   return (
     <Container>

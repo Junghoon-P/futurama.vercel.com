@@ -2,12 +2,13 @@ import styled from "@emotion/styled";
 import { CastData } from "../../types";
 import { CastCard } from "./CastCard";
 import { useCastData } from "../../hooks/useCastData";
+import { Error, Loading } from "../PageHandling";
 
 export const CastCardContainer = () => {
   const { data, error } = useCastData("");
 
-  if (error) return <div>An error has occured.</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error) return <Error />;
+  if (!data) return <Loading />;
 
   return (
     <Container>

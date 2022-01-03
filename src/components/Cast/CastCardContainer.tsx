@@ -3,6 +3,7 @@ import { CastData } from "../../types";
 import { CastCard } from "./CastCard";
 import { useCastData } from "../../hooks/useCastData";
 import { Error, Loading } from "../PageHandling";
+import { MEDIA_QUERY_END_POINT } from "../../constants";
 
 export const CastCardContainer = () => {
   const { data, error } = useCastData("");
@@ -24,5 +25,8 @@ const Container = styled.div`
   grid-template-columns: repeat(3, 1fr);
   width: 80%;
   gap: 30px;
-  background-color: coral;
+
+  @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;

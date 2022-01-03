@@ -1,6 +1,6 @@
 import React from "react";
-import { Navigation } from "./Navigation";
 import styled from "@emotion/styled";
+import { Navigation } from "./Navigation";
 
 export const Layout: React.FC = ({ children }) => {
   return (

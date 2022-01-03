@@ -15,7 +15,7 @@ export const Navigation = () => {
       <Link href={"/"} passHref>
         <Header>
           <a>
-            <Title src="/image/title.png" alt="" />
+            <Title src="/image/title.png" alt="Futurama logo" />
           </a>
         </Header>
       </Link>

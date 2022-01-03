@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useQuestionsData } from "../../hooks/useQuestionsData";
 import styled from "@emotion/styled";
 import { Error, Loading } from "../../components/PageHandling";
+import { MEDIA_QUERY_END_POINT, PALLETS } from "../../constants";
 
 const QuestionDetail: NextPage = () => {
   const [questionId, setQuestionId] = useState<number>(1);
@@ -20,25 +21,25 @@ const QuestionDetail: NextPage = () => {
   const nextQuiz = () => {
     if (id === 28) {
       if (select === correctAnswer) {
-        alert("뎃츠 롸잇");
+        alert("Correct");
       } else {
-        alert("뤙 엔서");
+        alert("Wrong~ Try again!");
       }
     } else if (select === correctAnswer) {
-      alert("뎃츠 롸잇");
+      alert("Correct");
       setQuestionId(questionId + 1);
     } else {
-      alert("뤙 엔서");
+      alert("Wrong! Try again~~");
     }
   };
 
   const { id, question, possibleAnswers, correctAnswer } = data;
 
   return (
-    <div>
-      <h2>
-        {id}/28 <span>{question}</span>
-      </h2>
+    <QuizWrap>
+      <h2>{id}/28 </h2>
+      <p>{question}</p>
+
       {possibleAnswers.map((answerList: string, index: number) => (
         <Article key={`saying-${index}`}>
           <input
@@ -52,11 +53,50 @@ const QuestionDetail: NextPage = () => {
         </Article>
       ))}
       <NextBtn onClick={nextQuiz}>Next</NextBtn>
-    </div>
+    </QuizWrap>
   );
 };
 
-const NextBtn = styled.button``;
+const QuizWrap = styled.article`
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid ${PALLETS.PURPLE};
+  border-radius: 1.5rem;
+  box-shadow: ${PALLETS.SHADOW};
+  background-color: ${PALLETS.TRANSPARENT};
+  line-height: 1.3rem;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: ${PALLETS.PURPLE};
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+`;
+
+const NextBtn = styled.button`
+  float: right;
+  padding: 8px 13px;
+  border: 2px solid ${PALLETS.GREEN};
+  border-radius: 1.5rem;
+  font-weight: 550;
+  color: ${PALLETS.GREEN};
+  background-color: ${PALLETS.TRANSPARENT};
+  box-shadow: ${PALLETS.SHADOW};
+
+  &:hover {
+    border: 2px solid ${PALLETS.TRANSPARENT};
+    color: #fff;
+    background-color: ${PALLETS.RED};
+  }
+`;
 
 const Article = styled.article`
   margin: 0 10px 10px 0;

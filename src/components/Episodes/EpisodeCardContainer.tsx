@@ -24,7 +24,9 @@ export const EpisodeCardContainer = () => {
   );
 };
 
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+const Container = styled.article`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;

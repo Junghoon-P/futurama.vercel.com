@@ -37,7 +37,7 @@ export const Navigation = () => {
 const Title = styled.img`
   width: 30vw;
   transition: 0.5s;
-  margin-top: 20px;
+  margin-top: 40px;
 
   :hover {
     transform: scale(1.2);
@@ -66,30 +66,43 @@ const MainCategory = styled.ul`
   display: flex;
   justify-content: center;
   width: 100vw;
-  margin-top: 20px;
-  font-size: 20px;
+  margin-top: 50px;
+  font-size: 30px;
   font-weight: 600;
 
   & > li {
-    padding: 3px 10px;
-    border-radius: 10px;
-    background-color: ${PALLETS.BLUE};
+    padding: 5px 10px 7px;
+    border-radius: 20px;
+    background-color: ${PALLETS.ORANGE};
   }
 
   & > li + li {
     margin-left: 30px;
   }
 
+  @media (max-width: ${MEDIA_QUERY_END_POINT.TABLET}) {
+    & > li {
+      padding: 3px 8px 5px;
+      border-radius: 15px;
+      font-size: 25px;
+      background-color: ${PALLETS.BROWN};
+    }
+
+    & > li + li {
+      margin-left: 20px;
+    }
+  }
+
   @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
     & > li {
       padding: 1px 6px 3px;
       border-radius: 10px;
-      font-size: 8px;
-      background-color: ${PALLETS.ORANGE};
+      font-size: 20px;
+      background-color: ${PALLETS.GREEN};
     }
 
     & > li + li {
-      margin-left: 10px;
+      margin-left: 15px;
     }
   }
 `;

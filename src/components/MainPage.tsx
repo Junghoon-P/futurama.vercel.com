@@ -25,6 +25,8 @@ const MainImage = styled.img`
 `;
 
 const Slogan = styled.h1`
+  font-size: 65px;
+  font-weight: 600;
   margin-top: 60px;
   background: -webkit-linear-gradient(
     298deg,
@@ -36,6 +38,10 @@ const Slogan = styled.h1`
   -webkit-text-fill-color: transparent;
 
   @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
-    font-size: 25px;
+    font-size: 35px;
+  }
+
+  @media (max-width: ${MEDIA_QUERY_END_POINT.TABLET}) {
+    font-size: 45px;
   }
 `;

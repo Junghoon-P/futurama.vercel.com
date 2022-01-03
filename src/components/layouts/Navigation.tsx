@@ -15,7 +15,7 @@ export const Navigation = () => {
       <Link href={"/"} passHref>
         <Header>
           <a>
-            <Title src="/image/title.png" alt="Futurama logo" />
+            <Logo src="/image/title.png" alt="Futurama logo" />
           </a>
         </Header>
       </Link>
@@ -34,7 +34,7 @@ export const Navigation = () => {
   );
 };
 
-const Title = styled.img`
+const Logo = styled.img`
   width: 30vw;
   transition: 0.5s;
   margin-top: 40px;
@@ -63,6 +63,7 @@ const Header = styled.h1`
 `;
 
 const MainCategory = styled.ul`
+  width: 80%;
   display: flex;
   justify-content: center;
   /* width: 100vw; */
@@ -102,6 +103,10 @@ const MainCategory = styled.ul`
     & > li + li {
       margin-left: 15px;
     }
+  }
+
+  @media (max-width: 639px) {
+    display: none;
   }
 `;
 

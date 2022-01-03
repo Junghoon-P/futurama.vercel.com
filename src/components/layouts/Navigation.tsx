@@ -54,7 +54,7 @@ const NavHeader = styled.header`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  margin-bottom: 30px;
 `;
 
 const Header = styled.h1`
@@ -65,7 +65,7 @@ const Header = styled.h1`
 const MainCategory = styled.ul`
   display: flex;
   justify-content: center;
-  width: 100vw;
+  /* width: 100vw; */
   margin-top: 50px;
   font-size: 30px;
   font-weight: 600;

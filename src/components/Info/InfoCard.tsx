@@ -21,15 +21,15 @@ export const InfoCard = ({ infoDataProps }: Creator) => {
 
 const Card = styled.div`
   margin: 0 20px;
-  line-height: 1.3;
-  background-color: ${PALLETS.BROWN};
   padding: 10px 10px 13px;
   border-radius: 10px;
+  line-height: 1.3;
+  background-color: ${PALLETS.BROWN};
 
   h1 {
+    margin-bottom: 7px;
     font-size: 19px;
     font-weight: bold;
-    margin-bottom: 7px;
   }
 `;
 

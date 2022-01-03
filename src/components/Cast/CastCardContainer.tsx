@@ -22,4 +22,7 @@ export const CastCardContainer = () => {
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  gap: 30px;
+  background-color: coral;
 `;

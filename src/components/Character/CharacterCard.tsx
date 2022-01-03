@@ -15,9 +15,9 @@ export const CharacterCard = ({ characterData }: CharacterCardProps) => {
       <Link href={`/characters/${id}`}>
         <a>
           <Profile src={images.main} alt="" />
-          <h3>
+          <Name>
             {name.first} {name.middle} {name.last}
-          </h3>
+          </Name>
         </a>
       </Link>
     </Card>
@@ -26,18 +26,28 @@ export const CharacterCard = ({ characterData }: CharacterCardProps) => {
 
 const Card = styled.div`
   max-width: 360px;
+  width: 80%;
   padding: 10px;
-  border: 1px solid ${PALLETS.ORANGE};
+  border: 1px solid ${PALLETS.YELLOW};
   border-radius: 10px;
+  box-shadow: ${PALLETS.SHADOW};
   background-color: ${PALLETS.TRANSPARENT};
-
-  @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
-    width: 120px;
-  }
 `;
 
 const Profile = styled.img`
+  object-fit: contain;
   width: 100%;
   aspect-ratio: 9/16;
-  object-fit: contain;
+`;
+
+const Name = styled.h3`
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+
+  @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
+    font-size: 13px;
+  }
 `;

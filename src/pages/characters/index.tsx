@@ -1,22 +1,19 @@
 import styled from "@emotion/styled/";
 import type { NextPage } from "next";
 import { CharacterCardContainer } from "../../components/Character/CharacterCardContainer";
-import { MEDIA_QUERY_END_POINT } from "../../constants";
 
 const Characters: NextPage = () => {
   return (
-    <div>
-      <Header>Futurama Character List</Header>
+    <Wrap>
       <CharacterCardContainer />
-    </div>
+    </Wrap>
   );
 };
 
-const Header = styled.h1`
-  margin: 20px 0;
-  @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
-    font-size: 20px;
-  }
+const Wrap = styled.section`
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 `;
 
 export default Characters;

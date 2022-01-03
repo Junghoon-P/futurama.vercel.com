@@ -40,10 +40,9 @@ const Container = styled.section`
   background-color: ${PALLETS.ORANGE};
   color: #fff;
 
-  @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
-  }
-
   @media (max-width: ${MEDIA_QUERY_END_POINT.TABLET}) {
+  }
+  @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
   }
 `;
 

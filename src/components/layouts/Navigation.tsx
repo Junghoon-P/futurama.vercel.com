@@ -73,7 +73,7 @@ const MainCategory = styled.ul`
   & > li {
     padding: 5px 10px 7px;
     border-radius: 20px;
-    background-color: ${PALLETS.ORANGE};
+    background-color: ${PALLETS.GREEN};
   }
 
   & > li + li {
@@ -85,7 +85,6 @@ const MainCategory = styled.ul`
       padding: 3px 8px 5px;
       border-radius: 15px;
       font-size: 25px;
-      background-color: ${PALLETS.BROWN};
     }
 
     & > li + li {
@@ -98,7 +97,6 @@ const MainCategory = styled.ul`
       padding: 1px 6px 3px;
       border-radius: 10px;
       font-size: 20px;
-      background-color: ${PALLETS.GREEN};
     }
 
     & > li + li {

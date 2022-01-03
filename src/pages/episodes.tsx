@@ -5,6 +5,7 @@ import { EpisodeCardContainer } from "../components/Episodes/EpisodeCardContaine
 const Episodes: NextPage = () => {
   return (
     <Section>
+      <h1 className="sr-only">Episodes</h1>
       <EpisodeCardContainer />
     </Section>
   );

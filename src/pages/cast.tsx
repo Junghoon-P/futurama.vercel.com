@@ -5,6 +5,7 @@ import { CastCardContainer } from "../components/Cast/CastCardContainer";
 const Cast: NextPage = () => {
   return (
     <CastWrap>
+      <h1 className="sr-only">Cast</h1>
       <CastCardContainer />
     </CastWrap>
   );

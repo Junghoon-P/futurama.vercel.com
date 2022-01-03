@@ -5,6 +5,7 @@ import { CharacterCardContainer } from "../../components/Character/CharacterCard
 const Characters: NextPage = () => {
   return (
     <Wrap>
+      <h1 className="sr-only">Character</h1>
       <CharacterCardContainer />
     </Wrap>
   );

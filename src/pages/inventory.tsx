@@ -3,10 +3,10 @@ import { InventoryCardContainer } from "../components/Inventory/InventoryCardCon
 
 const Inventory: NextPage = () => {
   return (
-    <div>
-      <h1>Inventory</h1>
+    <section>
+      <h1 className="sr-only">Inventory</h1>
       <InventoryCardContainer />
-    </div>
+    </section>
   );
 };
 

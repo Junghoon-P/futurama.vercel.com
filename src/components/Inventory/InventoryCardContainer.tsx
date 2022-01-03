@@ -3,6 +3,7 @@ import { InventoryData } from "../../types";
 import { InventoryCard } from "./InventoryCard";
 import { useInventoryData } from "../../hooks/useInventoryData";
 import { Error, Loading } from "../PageHandling";
+import { MEDIA_QUERY_END_POINT } from "../../constants";
 
 export const InventoryCardContainer = () => {
   const { data, error } = useInventoryData("");
@@ -24,7 +25,14 @@ export const InventoryCardContainer = () => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.article`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 80%;
+  margin: 0 auto;
+
+  @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;

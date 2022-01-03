@@ -24,7 +24,7 @@ const Card = styled.div`
   padding: 10px 10px 13px;
   border-radius: 10px;
   line-height: 1.3;
-  background-color: ${PALLETS.BROWN};
+  background-color: ${PALLETS.EGG};
 
   h1 {
     margin-bottom: 7px;
@@ -39,9 +39,11 @@ const Profile = styled.a`
   object-fit: contain;
   padding: 3px 5px 4px;
   border-radius: 7px;
+  color: #9c9999;
   background-color: ${PALLETS.TRANSPARENT};
 
   &:hover {
-    background-color: ${PALLETS.HOTPINK};
+    color: #fff;
+    background-color: ${PALLETS.RED};
   }
 `;

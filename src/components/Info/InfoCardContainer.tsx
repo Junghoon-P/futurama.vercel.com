@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { InfoCard } from "./InfoCard";
 import { useInfoData } from "../../hooks/useInfoData";
-import { MEDIA_QUERY_END_POINT, PALLETS } from "../../constants";
+import { PALLETS } from "../../constants";
 import { Error, Loading } from "../PageHandling";
 
 export const InfoDataContainer = () => {
@@ -39,11 +39,6 @@ const Container = styled.section`
   box-shadow: ${PALLETS.SHADOW};
   background-color: ${PALLETS.ORANGE};
   color: #fff;
-
-  @media (max-width: ${MEDIA_QUERY_END_POINT.TABLET}) {
-  }
-  @media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
-  }
 `;
 
 const Synopsis = styled.p`
